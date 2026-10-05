@@ -1,0 +1,263 @@
+/* 澳岛 AODAO support and privacy pages. Plain CSS, no build step, no external fonts or scripts.
+   Colours follow mobile/src/theme.ts (mango #FFB800, river #2D7FF9, ink #2E2E33, muted #6E6E76). */
+
+:root {
+  color-scheme: light dark;
+  --bg: #FFFFFF;
+  --panel: #F4F4F6;
+  --line: #E6E6EA;
+  --ink: #2E2E33;
+  --muted: #6E6E76;
+  --mango: #FFB800;
+  --mango-soft: #FFF4D6;
+  --mango-text: #8A5A00;
+  --mango-line: #F5DFA3;
+  --river: #2D7FF9;
+  --link: #1C5FD0;
+  --link-visited: #5B3FC4;
+  --river-soft: #E6F0FF;
+  --focus: #1C5FD0;
+  --mark-bg: #FFE08A;
+  --mark-ink: #2E2E33;
+  --mark-line: #E39A00;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16161A;
+    --panel: #222228;
+    --line: #34343C;
+    --ink: #EDEDF0;
+    --muted: #B4B4BC;
+    --mango-soft: #2E2610;
+    --mango-text: #FFD25C;
+    --mango-line: #5C4810;
+    --link: #8EC5FF;
+    --link-visited: #C9B8FF;
+    --river-soft: #142640;
+    --focus: #FFD25C;
+    --mark-bg: #FFD25C;
+    --mark-ink: #1A1A1E;
+    --mark-line: #FFB800;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    "Noto Sans CJK SC", "Noto Sans SC", "Source Han Sans SC", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.75;
+  overflow-wrap: break-word;
+}
+
+[lang="en"] { line-height: 1.65; }
+
+.skip {
+  position: absolute;
+  left: 16px;
+  top: -60px;
+  padding: 8px 14px;
+  background: var(--ink);
+  color: var(--bg);
+  border-radius: 8px;
+  z-index: 10;
+}
+.skip:focus { top: 12px; }
+
+.topbar {
+  height: 6px;
+  background: linear-gradient(90deg, var(--mango) 0 60%, var(--river) 60% 100%);
+}
+
+.wrap {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header.site {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 24px 0 18px;
+}
+header.site img {
+  width: 56px;
+  height: 56px;
+  border-radius: 13px;
+  flex: none;
+}
+header.site .brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;
+}
+header.site .brand strong { font-size: 20px; }
+header.site .brand span { color: var(--muted); font-size: 15px; }
+
+nav.site {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+nav.site a {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 1.4;
+}
+nav.site a[aria-current="page"] {
+  background: var(--mango);
+  color: #2E2E33;
+  font-weight: 600;
+}
+nav.site a:hover { text-decoration: underline; }
+
+main { padding: 8px 0 40px; }
+
+h1 { font-size: 30px; line-height: 1.3; margin: 28px 0 8px; }
+h2 { font-size: 23px; line-height: 1.35; margin: 40px 0 10px; padding-top: 6px; }
+h3 { font-size: 19px; line-height: 1.4; margin: 28px 0 6px; }
+h4 { font-size: 17px; margin: 20px 0 4px; }
+
+p, ul, ol { margin: 0 0 14px; }
+ul, ol { padding-left: 1.4em; }
+li { margin: 4px 0; }
+li > ul { margin: 4px 0 0; }
+
+a { color: var(--link); text-underline-offset: 3px; }
+a:visited { color: var(--link-visited); }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.lead { font-size: 18px; color: var(--ink); }
+.meta { color: var(--muted); font-size: 16px; margin: 0 0 6px; }
+
+.draft-banner {
+  margin: 18px 0 4px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: var(--mango-soft);
+  border: 1px solid var(--mango-line);
+  color: var(--ink);
+  font-size: 16px;
+}
+.draft-banner strong { color: var(--mango-text); }
+
+/* Placeholders the CEO (or a lawyer / engineer) must replace before publishing. Deliberately loud. */
+mark.tbc {
+  background: var(--mark-bg);
+  color: var(--mark-ink);
+  padding: 1px 4px;
+  border-radius: 4px;
+  box-shadow: inset 0 -2px 0 var(--mark-line);
+  font-weight: 600;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.card {
+  background: var(--panel);
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin: 16px 0;
+}
+.card > :last-child { margin-bottom: 0; }
+
+blockquote {
+  margin: 14px 0;
+  padding: 10px 16px;
+  border-left: 4px solid var(--river);
+  background: var(--river-soft);
+  border-radius: 0 10px 10px 0;
+}
+
+details.faq {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  margin: 10px 0;
+  padding: 0 16px;
+}
+details.faq summary {
+  cursor: pointer;
+  padding: 14px 0 14px 26px;
+  font-weight: 600;
+  list-style: none;
+  position: relative;
+}
+details.faq summary::-webkit-details-marker { display: none; }
+details.faq summary::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  margin-top: -5px;
+  border-right: 2.5px solid var(--river);
+  border-bottom: 2.5px solid var(--river);
+  transform: rotate(-45deg);
+}
+details.faq[open] summary::before { transform: rotate(45deg); margin-top: -7px; }
+details.faq[open] summary { border-bottom: 1px solid var(--line); margin-bottom: 10px; }
+
+dl.contact { margin: 0; }
+dl.contact div { display: flex; flex-wrap: wrap; gap: 4px 12px; padding: 6px 0; }
+dl.contact dt { color: var(--muted); min-width: 5.5em; }
+dl.contact dd { margin: 0; }
+
+.lang-divider {
+  margin: 56px 0 0;
+  border: 0;
+  border-top: 4px solid var(--mango);
+  width: 64px;
+}
+
+.back-top { font-size: 16px; }
+
+footer.site {
+  border-top: 1px solid var(--line);
+  padding: 20px 0 40px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+footer.site p { margin: 0 0 6px; }
+footer.site a { color: var(--link); }
+
+@media (max-width: 480px) {
+  body { font-size: 16.5px; }
+  .wrap { padding: 0 16px; }
+  h1 { font-size: 26px; }
+  h2 { font-size: 21px; }
+  header.site img { width: 48px; height: 48px; border-radius: 11px; }
+}
+
+/* The English half of a bilingual page: one h1 per page, so its title is an h2 styled like a page title. */
+h2.title { font-size: 30px; line-height: 1.3; margin: 28px 0 8px; padding-top: 0; }
+@media (max-width: 480px) { h2.title { font-size: 26px; } }

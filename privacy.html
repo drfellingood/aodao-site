@@ -29,9 +29,9 @@
 <!-- ======================================================================= 中文 -->
     <article id="zh" aria-labelledby="zh-title">
       <h1 id="zh-title">「出岛」隐私政策</h1>
-      <p class="meta">政策版本：2026-10-06</p>
-      <p class="meta">生效日期：2026-10-06</p>
-      <p class="meta">最近更新：2026-10-24</p>
+      <p class="meta">政策版本：2026-10-26</p>
+      <p class="meta">生效日期：2026-10-26</p>
+      <p class="meta">最近更新：2026-10-26</p>
 
       <p>我们知道，刚到一个新国家，把自己的联系方式交给别人需要信任。这份政策用尽量简单的话，说明「出岛」收集什么信息、为什么收集、给谁看、存多久，以及你可以怎么管理自己的信息。</p>
 
@@ -115,8 +115,9 @@
           <ul>
             <li><strong>Supabase</strong>（服务器、数据库和匿名登录）：保存你提交的申请和匿名账号 ID。</li>
             <li><strong>Resend</strong>（邮件发送）：有新申请时，我们用 Resend 给创始人发一封通知邮件。邮件<strong>只包含服务名称和期望日期</strong>，不包含你的称呼、联系方式或问题全文。这封邮件也会保存在创始人使用的邮箱服务里。</li>
+            <li><strong>Cloudflare Turnstile</strong>（人机验证）：在你第一次提交申请前，以及向导登录工作台时，用来判断操作的是真人还是自动程序，防止有人批量提交虚假申请。Cloudflare 会处理你的 IP 地址，以及浏览器和设备的技术信息（例如浏览器类型、网络连接特征、页面上的交互特征），并可能在你的设备上保存检测所必需的数据；它不会读取你在 App 里填写的称呼、联系方式或问题。Cloudflare 也会把这些信号用于改进 Turnstile，这一部分由 Cloudflare 自己负责，按其<a href="https://www.cloudflare.com/privacypolicy/">隐私政策</a>和<a href="https://www.cloudflare.com/turnstile-privacy-policy/">Turnstile 隐私说明</a>处理，保存期限由 Cloudflare 决定。</li>
           </ul>
-          这些服务商只按我们的指示处理数据，不能把你的信息用于它们自己的目的。</li>
+          Supabase 和 Resend 只按我们的指示处理数据，不能把你的信息用于它们自己的目的。</li>
         <li><strong>你选择的沟通工具</strong>：如果你留下微信号，我们会通过微信联系你，对话内容由微信按其自身的隐私政策处理。</li>
         <li><strong>法律要求时</strong>：在法律要求或允许的情况下（例如执法机关依法要求），我们可能需要提供信息。</li>
       </ul>
@@ -129,6 +130,7 @@
         <li>你提交的申请保存在 Supabase 位于<strong>澳洲悉尼</strong>（ap-southeast-2 区域）的服务器上。</li>
         <li>Supabase 是境外公司，它的支持团队或下级服务商可能在维护和排查故障时从澳洲以外访问数据。</li>
         <li>新申请的通知邮件经由 Resend 发送，Resend 把邮件内容存放在<strong>美国</strong>。邮件只含服务名称和期望日期。</li>
+        <li>人机验证由 Cloudflare 在其全球网络上处理，可能在澳洲以外（包括美国）进行。</li>
         <li>我们和向导在出行时，也可能在境外查看申请。</li>
         <li>如果你使用微信等境外通讯工具和我们联系，相关信息会由该服务商按其规定存放。</li>
       </ul>
@@ -190,9 +192,9 @@
 <!-- ======================================================================= English -->
     <article id="en" lang="en" aria-labelledby="en-title">
       <h2 class="title" id="en-title">Arrivo Privacy Policy</h2>
-      <p class="meta">Policy version: 2026-10-06</p>
-      <p class="meta">Effective date: 2026-10-06</p>
-      <p class="meta">Last updated: 2026-10-24</p>
+      <p class="meta">Policy version: 2026-10-26</p>
+      <p class="meta">Effective date: 2026-10-26</p>
+      <p class="meta">Last updated: 2026-10-26</p>
 
       <p>Sharing your contact details with someone when you have just arrived in a new country takes trust. This policy explains, in plain language, what information Arrivo (出岛) collects, why, who can see it, how long we keep it, and how you can manage it.</p>
 
@@ -275,8 +277,9 @@
           <ul>
             <li><strong>Supabase</strong> (server, database and anonymous sign-in): stores your submitted requests and anonymous account ID.</li>
             <li><strong>Resend</strong> (email delivery): when a new request arrives, we use Resend to send the founder a notification email. The email <strong>contains only the service name and preferred date</strong>, not your name, contact details or full question. The email is also stored by the founder's own email provider.</li>
+            <li><strong>Cloudflare Turnstile</strong> (human verification): before your first request is submitted, and when a guide signs in to the guide workbench, it checks that a person rather than an automated program is using the service, to stop bulk fake requests. Cloudflare processes your IP address and technical information about your browser and device (such as browser type, network connection characteristics and interaction signals on the page), and may store data on your device that is strictly needed for this check; it does not read the name, contact details or questions you enter in the app. Cloudflare also uses these signals to improve Turnstile; for that it acts on its own account under its <a href="https://www.cloudflare.com/privacypolicy/">Privacy Policy</a> and <a href="https://www.cloudflare.com/turnstile-privacy-policy/">Turnstile Privacy Addendum</a>, and decides how long the data is kept.</li>
           </ul>
-          These providers process data only on our instructions and may not use it for their own purposes.</li>
+          Supabase and Resend process data only on our instructions and may not use it for their own purposes.</li>
         <li><strong>Messaging tools you choose</strong>: if you give us a WeChat ID, we will contact you on WeChat, and those messages are handled under WeChat's own privacy policy.</li>
         <li><strong>When required by law</strong>: where required or authorised by law (e.g. a lawful request from a law enforcement agency).</li>
       </ul>
@@ -289,6 +292,7 @@
         <li>Submitted requests are stored on Supabase servers in <strong>Sydney, Australia</strong> (ap-southeast-2 region).</li>
         <li>Supabase is an overseas company; its support staff or sub-processors may access data from outside Australia for maintenance and troubleshooting.</li>
         <li>New-request notification emails are sent through Resend, which stores email content in the <strong>United States</strong>. These emails contain only the service name and preferred date.</li>
+        <li>Human verification is processed by Cloudflare on its global network and may take place outside Australia (including the United States).</li>
         <li>Guides and we may view requests while travelling overseas.</li>
         <li>If you contact us via an overseas messaging service such as WeChat, that information is stored according to that provider's terms.</li>
       </ul>
@@ -347,7 +351,7 @@
   </main>
 
   <footer class="site">
-    <p>政策版本 Policy version：2026-10-06 · 生效日期 Effective date：2026-10-06</p>
+    <p>政策版本 Policy version：2026-10-26 · 生效日期 Effective date：2026-10-26</p>
     <p><a href="index.html">帮助与支持 Support</a> · 仅服务布里斯班 Brisbane only</p>
   </footer>
 </div>

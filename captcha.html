@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<!-- The security check the Arrivo app opens in a small WebView before its first booking request (anonymous sign-in
+     with Supabase CAPTCHA protection). Only this site and Cloudflare Turnstile (script, iframe, requests:
+     challenges.cloudflare.com, per Cloudflare's CSP reference). No inline scripts or styles; Trusted Types on, with a
+     default policy that only lets Turnstile's own script URLs through (see captcha.js). Collects nothing: no form, no
+     storage of our own, no analytics. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; connect-src https://challenges.cloudflare.com; style-src 'self'; base-uri 'none'; form-action 'none'; require-trusted-types-for 'script'; trusted-types default">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<!-- Origin only (Turnstile checks which site it is on); never the path or query. -->
+<meta name="referrer" content="strict-origin">
+<meta name="color-scheme" content="light dark">
+<title>出岛 Arrivo · 安全验证</title>
+<link rel="stylesheet" href="captcha.css">
+<script src="captcha.js" defer></script>
+<script id="turnstile-api" src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&amp;onload=arrivoCaptchaReady" defer></script>
+</head>
+<body>
+<main>
+  <h1 id="title">安全验证</h1>
+  <p id="intro">确认你不是机器人后，就会回到「出岛」App 继续提交。</p>
+  <div id="widget"></div>
+  <p id="status" role="status" aria-live="polite"></p>
+  <button id="retry" type="button" hidden>再试一次</button>
+  <noscript><p>需要打开 JavaScript。JavaScript is required.</p></noscript>
+</main>
+</body>
+</html>

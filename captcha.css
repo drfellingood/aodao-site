@@ -1,0 +1,48 @@
+/* The app's security check page (captcha.html). Shown inside a small WebView, so: compact, no header, no links.
+   Colours follow mobile/src/theme.ts and style.css. */
+:root {
+  color-scheme: light dark;
+  --bg: #FFFFFF;
+  --ink: #2E2E33;
+  --muted: #6E6E76;
+  --panel: #F4F4F6;
+  --line: #D9D9DF;
+  --river: #2D7FF9;
+  --river-lip: #1C5FD0;
+  --on-river: #FFFFFF;
+  --focus: #1C5FD0;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16161A;
+    --ink: #EDEDF0;
+    --muted: #B4B4BC;
+    --panel: #222228;
+    --line: #34343C;
+    --focus: #FFD25C;
+  }
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "PingFang TC", "Hiragino Sans GB", "Microsoft YaHei",
+    "Noto Sans CJK SC", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+}
+main { max-width: 420px; margin: 0 auto; padding: 20px 16px 24px; }
+h1 { font-size: 20px; font-weight: 900; margin: 0 0 6px; }
+p { margin: 0 0 14px; }
+#intro { color: var(--muted); font-size: 14px; }
+#widget { min-height: 65px; }
+#status { color: var(--muted); font-size: 14px; font-weight: 700; margin-top: 12px; min-height: 1.55em; }
+button {
+  font: inherit; font-weight: 800; color: var(--on-river); background: var(--river); border: 0; border-radius: 16px;
+  min-height: 48px; padding: 0 20px; box-shadow: 0 4px 0 var(--river-lip); cursor: pointer;
+}
+button:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--river-lip); }
+button:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+button[hidden] { display: none; }

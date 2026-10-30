@@ -21,7 +21,7 @@
     'zh-Hant': {
       title: '安全驗證', intro: '確認你不是機器人後，就會回到「出岛」App 繼續提交。', loading: '正在載入驗證…',
       done: '驗證完成，正在返回 App…', doneOutside: '驗證完成。這個頁面只在「出岛」App 裡使用，可以關閉。', expired: '驗證已過期，正在重新驗證…', failed: '驗證沒有通過。請點「再試一次」。',
-      unavailable: '無法載入驗證。請檢查網絡後點「再試一次」。', retry: '再試一次', failedInApp: '驗證沒有完成，正在返回 App…', outside: '這個頁面只在「出岛」App 裡使用。',
+      unavailable: '無法載入驗證。請檢查網路後點「再試一次」。', retry: '再試一次', failedInApp: '驗證沒有完成，正在返回 App…', outside: '這個頁面只在「出岛」App 裡使用。',
     },
     en: {
       title: 'Security check', intro: 'Once we know you\'re not a bot, you\'ll go straight back to the Arrivo app to submit your request.', loading: 'Loading the check…',

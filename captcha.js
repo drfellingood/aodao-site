@@ -19,14 +19,14 @@
       unavailable: '无法加载验证。请检查网络后点「再试一次」。', retry: '再试一次', failedInApp: '验证没有完成，正在返回 App…', outside: '这个页面只在「出岛」App 里使用。',
     },
     'zh-Hant': {
-      title: '安全驗證', intro: '確認你不是機器人後，就會回到「出島」App 繼續提交。', loading: '正在載入驗證…',
-      done: '驗證完成，正在返回 App…', doneOutside: '驗證完成。這個頁面只在「出島」App 裡使用，可以關閉。', expired: '驗證已過期，正在重新驗證…', failed: '驗證沒有通過。請按「再試一次」。',
-      unavailable: '無法載入驗證。請檢查網絡後按「再試一次」。', retry: '再試一次', failedInApp: '驗證沒有完成，正在返回 App…', outside: '這個頁面只在「出島」App 裡使用。',
+      title: '安全驗證', intro: '確認你不是機器人後，就會回到「出岛」App 繼續提交。', loading: '正在載入驗證…',
+      done: '驗證完成，正在返回 App…', doneOutside: '驗證完成。這個頁面只在「出岛」App 裡使用，可以關閉。', expired: '驗證已過期，正在重新驗證…', failed: '驗證沒有通過。請點「再試一次」。',
+      unavailable: '無法載入驗證。請檢查網絡後點「再試一次」。', retry: '再試一次', failedInApp: '驗證沒有完成，正在返回 App…', outside: '這個頁面只在「出岛」App 裡使用。',
     },
     en: {
-      title: 'Security check', intro: 'Once we know you are not a bot, you go straight back to the Arrivo app to send your request.', loading: 'Loading the check…',
-      done: 'Done. Going back to the app…', doneOutside: 'Done. This page is only used inside the Arrivo app; you can close it.', expired: 'The check expired. Checking again…', failed: 'The check did not pass. Tap "Try again".',
-      unavailable: 'The check could not load. Check your connection, then tap "Try again".', retry: 'Try again', failedInApp: 'The check did not finish. Going back to the app…', outside: 'This page is only used inside the Arrivo app.',
+      title: 'Security check', intro: 'Once we know you\'re not a bot, you\'ll go straight back to the Arrivo app to submit your request.', loading: 'Loading the check…',
+      done: 'Done. Going back to the app…', doneOutside: 'Done. This page is only used inside the Arrivo app; you can close it.', expired: 'The check expired. Checking again…', failed: 'The check didn\'t pass. Tap “Try again”.',
+      unavailable: 'The check couldn\'t load. Check your connection, then tap “Try again”.', retry: 'Try again', failedInApp: 'The check didn\'t finish. Going back to the app…', outside: 'This page is only used inside the Arrivo app.',
     },
   };
 
